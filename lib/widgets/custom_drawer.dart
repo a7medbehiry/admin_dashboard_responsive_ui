@@ -1,8 +1,8 @@
 import 'package:admin_dashboard/models/drawer_item_model.dart';
 import 'package:admin_dashboard/utils/app_images.dart';
-import 'package:admin_dashboard/widgets/active_and_inactive_item.dart';
+import 'package:admin_dashboard/widgets/active_and_inactive_drawer_item.dart';
 import 'package:admin_dashboard/widgets/drawer_info.dart';
-import 'package:admin_dashboard/widgets/drawer_items_list_view_builder.dart';
+import 'package:admin_dashboard/widgets/drawer_items_sliver_list_builder.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -33,7 +33,9 @@ class CustomDrawer extends StatelessWidget {
             child: Column(
               children: [
                 Expanded(
-                  child: SizedBox(),
+                  child: SizedBox(
+                    height: 20,
+                  ),
                 ),
                 InActiveDrawerItem(
                   drawerItemModel: DrawerItemModel(

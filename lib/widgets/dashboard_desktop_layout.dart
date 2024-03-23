@@ -1,3 +1,4 @@
+import 'package:admin_dashboard/widgets/all_expenses.dart';
 import 'package:admin_dashboard/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -11,6 +12,19 @@ class DashBoardDesktopLayout extends StatelessWidget {
       children: [
         Expanded(
           child: CustomDrawer(),
+        ),
+        SizedBox(
+          width: 32,
+        ),
+        Expanded(
+          flex: 2,
+          child: Column(
+            children: [
+              Expanded(
+                child: AllExpenses(),
+              ),
+            ],
+          ),
         ),
       ],
     );
