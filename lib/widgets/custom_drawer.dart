@@ -5,7 +5,6 @@ import 'package:admin_dashboard/widgets/active_and_inactive_drawer_item.dart';
 import 'package:admin_dashboard/widgets/drawer_info.dart';
 import 'package:admin_dashboard/widgets/drawer_items_sliver_list_builder.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({super.key});

@@ -16,7 +16,7 @@ class TitleTextField extends StatelessWidget {
           style: AppStyles.styleMedium16(context),
         ),
         const SizedBox(
-          height: 15,
+          height: 8,
         ),
         CustomTextField(
           hintText: hintText,
