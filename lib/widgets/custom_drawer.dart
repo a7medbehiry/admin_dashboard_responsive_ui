@@ -12,13 +12,16 @@ class CustomDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: MediaQuery.sizeOf(context).width * .7,
       color: Colors.white,
       child: const CustomScrollView(
         slivers: [
           SliverToBoxAdapter(
             child: DrawerInfo(
-              userInfoModel: UserInfoModel(image:  Assets.imagesAvatar3, title: 'Lekan Okeowo', subTitle: 'demo@gmail.com'),
-            
+              userInfoModel: UserInfoModel(
+                  image: Assets.imagesAvatar3,
+                  title: 'Lekan Okeowo',
+                  subTitle: 'demo@gmail.com'),
             ),
           ),
           SliverToBoxAdapter(
