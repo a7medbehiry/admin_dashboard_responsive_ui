@@ -1,6 +1,7 @@
 import 'package:admin_dashboard/utils/app_images.dart';
 import 'package:admin_dashboard/utils/app_styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/svg.dart';
 
 class MyCard extends StatelessWidget {
@@ -63,8 +64,10 @@ class MyCard extends StatelessWidget {
                 ],
               ),
             ),
-            const SizedBox(
-              height: 25,
+            const Flexible(
+              child: SizedBox(
+                height: 25,
+              ),
             ),
           ],
         ),
