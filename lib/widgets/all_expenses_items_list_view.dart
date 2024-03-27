@@ -38,35 +38,41 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: items.asMap().entries.map(
-        (e) {
-          int index = e.key;
-          var item = e.value;
-
-          return index == 1
-              ? Expanded(
-                  child: GestureDetector(
-                    onTap: () => updateIndex(index),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 12),
-                      child: AllExpensesItem(
-                        itemModel: item,
-                        isActive: activeIndex == index,
-                      ),
-                    ),
-                  ),
-                )
-              : Expanded(
-                  child: GestureDetector(
-                    onTap: () => updateIndex(index),
-                    child: AllExpensesItem(
-                      itemModel: item,
-                      isActive: activeIndex == index,
-                    ),
-                  ),
-                );
-        },
-      ).toList(),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () => updateIndex(0),
+            child: AllExpensesItem(
+              itemModel: items[0],
+              isActive: activeIndex == 0,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 12,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () => updateIndex(1),
+            child: AllExpensesItem(
+              itemModel: items[1],
+              isActive: activeIndex == 1,
+            ),
+          ),
+        ),
+        const SizedBox(
+          width: 12,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () => updateIndex(2),
+            child: AllExpensesItem(
+              itemModel: items[2],
+              isActive: activeIndex == 2,
+            ),
+          ),
+        ),
+      ],
     );
   }
 
@@ -76,13 +82,3 @@ class _AllExpensesItemsListViewState extends State<AllExpensesItemsListView> {
     });
   }
 }
-
-  // return ListView.builder(
-  //     scrollDirection: Axis.horizontal,
-  //     itemCount: items.length,
-  //     itemBuilder: (BuildContext context, int index) {
-  //       return AllExpensesItem(
-  //         itemModel: items[index],
-  //       );
-  //     },
-  //   );
